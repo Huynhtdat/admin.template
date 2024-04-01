@@ -119,6 +119,29 @@ return [
         ]
     ],
     [
+        'title' => 'Employee',
+        'routeName' => null,
+        'icon' => '<i class="ti ti-user"></i>',
+        'roles' => [
+            App\Enums\Admin\AdminRoles::SuperAdmin,
+            App\Enums\Admin\AdminRoles::Admin
+        ],
+        'sub' => [
+            [
+                'title' => 'add',
+                'routeName' => 'admin.employee.create',
+                'icon' => '<i class="ti ti-plus"></i>',
+                'roles' => [],
+            ],
+            [
+                'title' => 'list',
+                'routeName' => 'admin.employee.index',
+                'icon' => '<i class="ti ti-list"></i>',
+                'roles' => [],
+            ],
+        ]
+    ],
+    [
         'title' => 'admin',
         'routeName' => null,
         'icon' => '<i class="ti ti-user-cog"></i>',

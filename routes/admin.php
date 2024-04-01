@@ -51,8 +51,8 @@ Route::group(['middleware' => 'admin.auth.admin:admin'], function(){
         Route::put('/edit', 'update')->name('update');
         Route::delete('/delete/{id}', 'delete')->name('delete');
     });
-    
-    
+
+
     Route::prefix('/blog')
     ->as('blog.')
     ->group(function() {
@@ -92,11 +92,24 @@ Route::group(['middleware' => 'admin.auth.admin:admin'], function(){
             });
         });
     });
-    
+
 
     //user
     Route::prefix('/manager-user')->as('user.')->group(function(){
         Route::controller(App\Admin\Http\Controllers\User\UserController::class)->group(function(){
+            Route::get('/add', 'create')->name('create');
+            Route::get('/', 'index')->name('index');
+            Route::get('/edit/{id}', 'edit')->name('edit');
+            Route::put('/edit', 'update')->name('update');
+            Route::post('/add', 'store')->name('store');
+            Route::delete('/delete/{id}', 'delete')->name('delete');
+        });
+
+    });
+
+    //employee
+    Route::prefix('/manager-employee')->as('employee.')->group(function(){
+        Route::controller(App\Admin\Http\Controllers\Employee\EmployeeController::class)->group(function(){
             Route::get('/add', 'create')->name('create');
             Route::get('/', 'index')->name('index');
             Route::get('/edit/{id}', 'edit')->name('edit');
@@ -152,7 +165,7 @@ Route::group(['middleware' => 'admin.auth.admin:admin'], function(){
         Route::get('/', 'index')->name('index');
         Route::put('/', 'update')->name('update');
     });
-    
+
     Route::prefix('/search')->as('search.')->group(function () {
         Route::prefix('/select')->as('select.')->group(function () {
             Route::get('/tag', [App\Admin\Http\Controllers\Blog\Tag\TagSearchSelectController::class, 'selectSearch'])->name('tag');

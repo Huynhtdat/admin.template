@@ -16,6 +16,7 @@ class RepositoryServiceProvider extends ServiceProvider
         'App\Admin\Repositories\Slider\SliderItemRepositoryInterface' => 'App\Admin\Repositories\Slider\SliderItemRepository',
         'App\Admin\Repositories\Page\PageRepositoryInterface' => 'App\Admin\Repositories\Page\PageRepository',
         'App\Admin\Repositories\Tag\TagRepositoryInterface' => 'App\Admin\Repositories\Tag\TagRepository',
+        'App\Admin\Repositories\Employee\EmployeeRepositoryInterface' => 'App\Admin\Repositories\Employee\EmployeeRepository',
     ];
     /**
      * Register services.

@@ -248,4 +248,44 @@ return [
             'addClass' => 'text-center'
         ],
     ],
+    'employee' => [
+        'username' => [
+            'title' => 'username',
+            'orderable' => false,
+            'visible' => false
+        ],
+        'fullname' => [
+            'title' => 'fullname',
+            'orderable' => false
+        ],
+        'email' => [
+            'title' => 'email',
+            'orderable' => false,
+        ],
+        'phone' => [
+            'title' => 'phone',
+            'orderable' => false
+        ],
+        'gender' => [
+            'title' => 'gender',
+            'orderable' => false,
+            'visible' => false
+        ],
+        'roles' => [
+            'title' => 'roles',
+            'orderable' => false,
+        ],
+        'created_at' => [
+            'title' => 'createdAt',
+            'orderable' => false,
+            'visible' => false
+        ],
+        'action' => [
+            'title' => 'action',
+            'orderable' => false,
+            'exportable' => false,
+            'printable' => false,
+            'addClass' => 'text-center'
+        ],
+    ],
 ];

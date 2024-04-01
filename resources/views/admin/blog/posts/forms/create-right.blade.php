@@ -34,7 +34,7 @@
             </x-select>
         </div>
     </div>
-    
+
     <div class="card mb-3">
         <div class="card-header">
             @lang('avatar')
@@ -43,6 +43,7 @@
             <x-input-image-ckfinder name="feature_image" showImage="featureImage" />
         </div>
     </div>
+
     <div class="card">
         <div class="card-header">
             @lang('tag')

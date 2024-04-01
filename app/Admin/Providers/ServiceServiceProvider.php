@@ -14,7 +14,8 @@ class ServiceServiceProvider extends ServiceProvider
         'App\Admin\Services\Slider\SliderServiceInterface' => 'App\Admin\Services\Slider\SliderService',
         'App\Admin\Services\Slider\SliderItemServiceInterface' => 'App\Admin\Services\Slider\SliderItemService',
         'App\Admin\Services\Page\PageServiceInterface' => 'App\Admin\Services\Page\PageService',
-        'App\Admin\Services\Blog\Tag\TagServiceInterface' => 'App\Admin\Services\Blog\Tag\TagService',
+        'App\Admin\Services\Employee\TagServiceInterface' => 'App\Admin\Services\Employee\TagService',
+        'App\Admin\Services\Employee\EmployeeServiceInterface' => 'App\Admin\Services\Employee\EmployeeService',
     ];
     /**
      * Register services.
